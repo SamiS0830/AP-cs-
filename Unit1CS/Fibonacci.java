@@ -8,12 +8,13 @@ public class Fibonacci
         
     System.out.println(a);
     System.out.println(b);
-     for(b=1; b<30;b=b){
-         a=b;
-        b=c;
+     for(int e=1; e<30;e++){
           c=a+b;
         System.out.println(c);
-         
+     
+             
+         a=b;
+        b=c;
         
      }
       
