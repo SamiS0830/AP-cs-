@@ -9,7 +9,7 @@ public class sumOfSquares{
  }
     public static void testSumOfSquares(int number, int expected){
         int result = sumOfSquares(number);
-        System.out.println("number: " + number + "expected: " + expected +"reslt: " + result);
+        System.out.println("number: " + number + "expected: " + expected +"result: " + result);
         
         if(result == expected){
             System.out.println("YAYY");
@@ -23,5 +23,7 @@ public class sumOfSquares{
         testSumOfSquares(3, 14);
         testSumOfSquares(2, 5);
         testSumOfSquares(1, 1);
+        testSumOfSquares(4, 30);
+        testSumOfSquares(5, 55);
     }
 }
