@@ -8,7 +8,7 @@ public class Ball extends PApplet{
         size(400,400);
     }
     public void setup(){
-        draw();
+
    
         x = width/2;
         y = width/2;
