@@ -2,10 +2,8 @@ public class ZNameLength{
     public static int countZNames(String[] name){
         int total = 0;
         for(String value : name){
-            if(value.length()<1){
-                return -1;
-            }
-            if(value.substring(0,1).equals("Z")){
+            
+            if(value.length<1 && (value.substring(0,1).equals("Z") || value.substring(0,1).equals("z")){
                 total += value.length();
             }
         }
