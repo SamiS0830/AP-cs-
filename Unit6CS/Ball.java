@@ -1,5 +1,5 @@
 
-import processing.core.PApplet;
+import processing.core.*;
 
 public class Ball extends PApplet{
     
