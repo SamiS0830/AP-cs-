@@ -16,24 +16,24 @@ public class Bounce extends PApplet
 
     public void setup()
     {
-        balls = new ArrayList<Ball>();
-        balls.add(new Ball(this));
+        balls = new ArrayList<BallTest>();
+        balls.add(new BallTest(this));
     }
 
     public void draw()
     {
         background(0);
-        for (Ball b : balls)
+        for (BallTest b : balls)
             b.display();
     }
 
     public void keyPressed()
     {
         for (int i=0; i<10; i++)
-            balls.add(new Ball(this));        
+            balls.add(new BallTest(this));        
     }
 
-    private ArrayList<Ball> balls;
+    private ArrayList<BallTest> balls;
 
     public static void main(String[] args)
     {
