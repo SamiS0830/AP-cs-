@@ -4,7 +4,7 @@ public class SumOfSquares{
     public static double sumOfSquares(ArrayList<Double> nums){
         double total = 0.0;
         for(int i = 0; i<nums.size(); i++){
-            total+= nums.get(i);
+            total+= nums.get(i)*nums.get(i);
         }
         return total;
     }
@@ -22,20 +22,20 @@ public class SumOfSquares{
     
     public static void main(String[] args){
         ArrayList<Double> num = new ArrayList<Double>();
-        num.add(5.4);
-        num.add(12.0);
-        num.add(3.6);
+        num.add(0.0);
+        num.add(0.0);
+        num.add(0.0);
         ArrayList<Double> num2 = new ArrayList<Double>();
-        num2.add(6.0);
-        num2.add(3.2);
-        num2.add(0.8);
+        num2.add(1.0);
+        num2.add(2.0);
+        num2.add(3.0);
         ArrayList<Double> num3 = new ArrayList<Double>();
-        num3.add(5.6);
-        num3.add(2.4);
+        num3.add(2.0);
+        num3.add(2.0);
         num3.add(2.0); 
         
-     testSumOfSquares(num, 21.0);
-    testSumOfSquares(num2, 10.0);
-        testSumOfSquares(num3, 10.0);
+     testSumOfSquares(num, 0.0);
+    testSumOfSquares(num2, 14.0);
+        testSumOfSquares(num3, 12.0);
     }
 }
