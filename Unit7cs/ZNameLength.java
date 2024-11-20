@@ -3,7 +3,7 @@ public class ZNameLength{
         int total = 0;
         for(String value : name){
             
-            if(value.length<1 && (value.substring(0,1).equals("Z") || value.substring(0,1).equals("z")){
+        if(value.length()>1 && (value.substring(0,1).equals("Z") || value.substring(0,1).equals("z"))){
                 total += value.length();
             }
         }
