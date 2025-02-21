@@ -14,6 +14,7 @@ public class Project extends PApplet{
     public void draw(){
         startscene.display();
     }
+    public void 
     
     
     public static void main(String[] args){
