@@ -8,7 +8,7 @@ public class Project extends PApplet{
     
     public void setup(){
     startscene = new StartScene(this);
-    startscene.setup();A
+    startscene.setup();
     }
     
     public void draw(){

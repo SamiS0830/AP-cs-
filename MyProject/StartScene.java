@@ -1,7 +1,7 @@
 import processing.core.*;
 
 
-public class StartScene{
+public class StartScene implements Scene{
     private PImage back;
 
     
@@ -9,9 +9,6 @@ public class StartScene{
         this.p = p;
     }
     
-    public void settings() {
-        
-    }
     
     public void setup(){
     back = p.loadImage("tree.png");

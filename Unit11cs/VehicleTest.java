@@ -11,7 +11,7 @@ public class VehicleTest{
             vehicle.add(new Bicycle());
         
         for(Vehicle v : vehicle){
-          System.out.println(v.getName() + " " + v.getWheelCount() + "  " + v.getIsHumanPowered() +" "+ v.totalWheels() + " " + v.humanPower() + " ");
+          System.out.println(v.getName() + " " + v.getWheelCount() + "  " + v.getIsHumanPowered() +" "+ totalWheels(vehicle) + " " + humanPower(vehicle) + " ");
     }
     }
     
