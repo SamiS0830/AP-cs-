@@ -33,7 +33,7 @@ public class ShapeCollection{
         
     }
     public void main(String[] args){
-        NumberOfSides(Shapes);
+        NumberOfSides("Rectangle");
         addShape("Rectangle", 3);
         averageSides(Shapes);
         evenSides(Shapes);

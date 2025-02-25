@@ -26,8 +26,10 @@ public class AnimalCalculator{
         result=result/ani.size();
         return result;
     }
+    
+    
     public static Animal leastLegs(ArrayList<Animal> ani){
-        int legCount = 0;
+        int legCount = 10000000;
         Animal result = new Animal("", 0, true);
         for(Animal a : ani){
          if(a.getLeg()< legCount){
