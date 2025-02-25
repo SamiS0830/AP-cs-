@@ -8,8 +8,9 @@ public class ShapeCollection{
             return shape.getSides();
        }  
         }
+        return -1;
     }
-    public static void addShape(Shape shape){
+    public void addShape(Shape shape){
         Shapes.add(shape);
     }
     public static int averageSides(ArrayList<Shape> Shapes){
@@ -31,11 +32,11 @@ public class ShapeCollection{
         return total; 
         
     }
-    public static void main(String[] args){
-        NumberOfIdeas(Shapes);
+    public void main(String[] args){
+        NumberOfSides(Shapes);
         addShape("Rectangle", 3);
         averageSides(Shapes);
-        evenSides(Shapies)
+        evenSides(Shapes);
     }
     
 }
