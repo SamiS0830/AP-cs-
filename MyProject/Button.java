@@ -17,7 +17,7 @@ public class Button{
     private float r;
     private PApplet p;
     private String words;
-
+    private int c;
 
 public void display(){
     if(mouseOver(p.mouseX, p.mouseY)){
@@ -39,10 +39,13 @@ public void display(){
 public boolean mouseOver(float mx, float my){
    return mx >= x && mx <= x + w && my >= y && my <= y + h;
 }
-    
+
+public int getC(){
+    return c;
+}
 public void mousePressed(){
     if(mouseOver(p.mouseX, p.mouseY)){
-      
+      c++;
     }
 }
 }

@@ -13,9 +13,9 @@ public class Project extends PApplet{
     scenes = new ArrayList<Scene>();
         scenes.add(new StartScene(this));
         scenes.add(new PlayScene(this));
-       // scenes.add(new EndScene(this));
+        scenes.add(new EndScene(this));
         
-        current = 0;
+        current = Button.getC();
         
  
       
