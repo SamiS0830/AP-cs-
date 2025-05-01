@@ -29,7 +29,7 @@ public class StartScene implements Scene{
         p.fill(0);
 
         p.textFont(p.createFont("Georgia", 30));
-        p.text("Start Scene - Press Any Key to Continue", p.width / 3, p.height / 2);
+        p.text("Start Scene - Press ENTER to Continue", p.width / 3, p.height / 2);
         
 
         

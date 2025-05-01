@@ -18,7 +18,8 @@ public class Button{
     private PApplet p;
     private String words;
     private int c;
-
+    private float textX;
+    private float textY;
 public void display(){
     if(mouseOver(p.mouseX, p.mouseY)){
        int c1 = p.color(255);
@@ -30,12 +31,16 @@ public void display(){
     p.stroke(255);
     p.rect(x,y,w,h,r);
     p.fill(0);
-    p.textAlign(PConstants.CENTER, PConstants.CENTER);
+    p.textAlign(PConstants.CENTER, PConstants.TOP);
     p.text(words, x, y);
+    
     
     
               }
     
+public boolean wasClicked(float mx, float my){
+    return mouseOver(mx, my) && p.mousePressed;
+}
 public boolean mouseOver(float mx, float my){
    return mx >= x && mx <= x + w && my >= y && my <= y + h;
 }

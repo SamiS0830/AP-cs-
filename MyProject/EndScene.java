@@ -6,6 +6,8 @@ public class EndScene implements Scene{
 
     
     public EndScene(PApplet p){
+        this.p=p;
+        setup();
 
     }
     
@@ -16,9 +18,7 @@ public class EndScene implements Scene{
         
     }
     public void display(){
-        p.background(0);
-       
-        
+
 
     }
     private PApplet p;
