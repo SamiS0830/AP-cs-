@@ -115,6 +115,7 @@ public class Mover{
     
     public void update(){
         vel.add(accel);
+       // v.limit(topSpeed);
         pos.add(vel);
         accel.mult(0);
     }
