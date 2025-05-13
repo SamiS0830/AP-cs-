@@ -9,6 +9,9 @@ public class Teacher{
     public String subject(){
         return subject;
     }
+    public String toString(){
+        return getName() + subject();
+    }
     private String name;
     private String subject;
 }

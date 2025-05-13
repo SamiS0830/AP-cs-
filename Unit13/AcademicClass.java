@@ -1,6 +1,10 @@
 import java.util.ArrayList;
 
 public class AcademicClass{
+    
+    public AcademicClass(){
+    
+    }
     public AcademicClass(ArrayList<Student> students, Teacher t){
         this.teacher = t;
         this.students = students;
@@ -10,31 +14,36 @@ public class AcademicClass{
         students.add(s);
     }
     public void setTeacher(Teacher teach){
-        Teacher t = teach;
+       this.teacher = teach;
     }
     public void classInfo(){
         for(Student s : students){
             System.out.println(s);
         }
-        System.out.println(t); 
+        System.out.println(teacher); 
     }
     
     public ArrayList<Student> oddNumb(){
         ArrayList<Student> stud = new ArrayList<Student>();
         for(Student s : students){
-            if(s.favoriteNumber%2==0){
+            if(s.favNumber()% 2==1){
                 stud.add(s);
             }
         }
+        return stud;
     }
     public ArrayList<Student> favNumber(int n){
-        ArrayList<Student> Result = new ArrayList();
+        ArrayList<Student> Result = new ArrayList<Student>();
         for(Student s : students){
+            if(s.favNumber()== 3){
                 Result.add(s);
             }
+            }
+          return Result;
         }
-        return Result;
-    }
+    
+    
+
     
     public static void main(String[] args){
         AcademicClass classA = new AcademicClass();
@@ -46,8 +55,15 @@ public class AcademicClass{
 
         classA.setTeacher(new Teacher("Mr. Smith", "Math"));
         classA.classInfo();
-   
-            System.out.println("Favorite Number:" + classA.n + classA.favNumber(3) + "odd numb" +      classA.oddNumb());
+        
+           System.out.println("\nStudents with odd favorite numbers:");
+        for(Student s : classA.oddNumb()){
+            System.out.println(s);
+        }
+          System.out.println("\nStudents with favorite number 3:");
+        for (Student s : classA.favNumber(3)) {
+            System.out.println(s);
+        }
     }
     
     private Teacher teacher;

@@ -16,8 +16,7 @@ public class Mover{
     boolean sound= true;
     
     public Mover(PApplet p, PVector pos, PVector vel, PVector accel, float size, int c, String word){
-        
-        
+        System.out.println(word);
         this.p = p;
         this.pos = pos;
         this.vel = vel;
@@ -34,15 +33,7 @@ public class Mover{
         zenFile.add(new SoundFile(p, "cheeky.mp3"));
         //zenFile.add(new SoundFile(p, "furelise.mp3"));
         
-        hipFile = new ArrayList<SoundFile>();
         
-        hipFile.add(new SoundFile(p, "drum.mp3"));
-        hipFile.add(new SoundFile(p, "brass.mp3"));
-        hipFile.add(new SoundFile(p, "brass.mp3"));
-        
-       // zenFile.add(new SoundFile(p, "drum.mp3"));
-      //  zenFile.add(new SoundFile(p, "brass.mp3"));
-      //  zenFile.add(new SoundFile(p, "brass.mp3"));
         
      pick = zenFile.get((int)p.random(0, zenFile.size()));
         pick.jump((float)p.random(0,5));
@@ -78,7 +69,7 @@ public class Mover{
     
     
     public void display() {
-        p.keyPressed();
+
         p.fill(c);
         p.ellipse(pos.x, pos.y, size, size);
         

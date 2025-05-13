@@ -5,7 +5,9 @@ import java.util.*;
 
 public class PlayScene implements Scene{
     ArrayList<Mover> movers = new ArrayList<>();
-    ArrayList<PImage> bg;
+   // ArrayList<PImage> bg;
+    ArrayList<String> names;
+    PImage bg;
     int randomBg;
     
     public PlayScene(PApplet p){
@@ -29,19 +31,52 @@ public class PlayScene implements Scene{
         } else {
             Background.resize(p.width, p.height);  // Resize image
         } */
+        
+        names = new ArrayList<>();
+        names.add("mount.png");
+        names.add("purplemount.jpg");
+        names.add("springFlower.jpg");
+        names.add("pinkFlower.jpg");
+        names.add("mountainss.jpg");
+        names.add("moon.jpg");
+        names.add("tree.jpg");
+        names.add("tree.png");
+        names.add("yellow.jpg");
+        names.add("sunshine.jpg");
+        names.add("water.jpg");
+        names.add("creek.jpg");
+        
+        randomBg = (int)p.random(0, names.size());
+        
+        bg = p.loadImage(names.get(randomBg));
+        
+        
+        
         goButton = new Button (buttonX, buttonY, buttonWidth, buttonHeight, 30, "", p);
         
-        bg = new ArrayList<PImage>();
-        bg.add(p.loadImage("mount.png"));
+       // bg = new ArrayList<PImage>();
+      /*  bg.add(p.loadImage("mount.png"));
      //   bg.add(p.loadImage("lake.jpg"));
         bg.add(p.loadImage("purplemount.jpg")) ;
         bg.add(p.loadImage("springFlower.jpg"));
         bg.add(p.loadImage("pinkFlower.jpg"));
-        //bg.add(p.loadImage("starry.png"));
-        for(PImage b : bg){
+        bg.add(p.loadImage("mountainss.jpg"));
+        bg.add(p.loadImage("moon.jpg"));
+        bg.add(p.loadImage("tree.jpg"));
+        bg.add(p.loadImage("tree.jpg"));
+        bg.add(p.loadImage("yellow.jpg"));
+        bg.add(p.loadImage("sunshine.jpg"));
+        bg.add(p.loadImage("water.jpg"));
+        bg.add(p.loadImage("creek.jpg"));
+       */
+       // for(String s : names){
+            
+       // }
+       /* for(PImage b : bg){
             b.resize(p.width, p.height);
         }
-        randomBg = (int)p.random(0, bg.size());
+      
+        bg.add(p.loadImage())*/
     }
     
     
@@ -56,7 +91,7 @@ public class PlayScene implements Scene{
   
         if (goButton.wasClicked(p.mouseX, p.mouseY)){
             
-            String[] words = buffer.split("\\s+");
+            String[] words = buffer.split(" ");
         p.noStroke();
             
         for (int i = 0; i < words.length; i++) {
@@ -104,7 +139,7 @@ public class PlayScene implements Scene{
     }
     
     public void visualizePoem(){
-        System.out.println("VisualizePoem method called"); 
+       // System.out.println("VisualizePoem method called"); 
         if (buffer.isEmpty()) {
             System.out.println("Buffer is empty!");
             return;  // Stop execution if there's no text to visualize
@@ -117,7 +152,7 @@ public class PlayScene implements Scene{
                 mover.update();
                 mover.outScreen();
                 mover.accelerateRandomly();
-                mover.keyPressed();
+
   
        
             }
@@ -130,6 +165,14 @@ public class PlayScene implements Scene{
         return goButton.wasClicked(p.mouseX, p.mouseY);
     }
 
+    public void stopAll(){
+        for (Mover mover : movers){
+            mover.stopSound();
+        }
+        movers.clear();
+        buffer = "";
+        visualize = false;
+    }
     public void keyPressed(){
                 
        
@@ -145,7 +188,7 @@ public class PlayScene implements Scene{
          if(p.keyCode == PApplet.ENTER){
              for(Mover mover : movers){
                   mover.stopSound();
-                 System.out.println("Presse Enter -- Stop Sound");
+                 System.out.println("Pressed Enter -- Stop Sound");
                
              }
             buffer = "";

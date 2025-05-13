@@ -11,4 +11,8 @@ public class Student{
     }
     private String name;
     private int favoriteNumber;
+    
+    public String toString(){
+        return this.getName() + this.favNumber();
+    }
 }

@@ -32,12 +32,16 @@ public class Project extends PApplet{
     public void keyPressed(){
          if(current==1){
                 ((PlayScene) scenes.get(current)).keyPressed();  
+         
+     
         }
         if(keyCode == ENTER){ 
             if(current<1){
+               
                 current++;
             }
             else{
+                 ((PlayScene) scenes.get(current)).stopAll();
                 current = 0;
                 
             }
